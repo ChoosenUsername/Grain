@@ -2,9 +2,13 @@
 #include <iostream>
 #include <cstddef>
 
-class StreamCipherGrain{
+class Cipher{
 public:
-void start_init();
+void start_init(std::string, std::string);
+std::vector<std::byte> str_to_vec(std::string);
+
+std::byte nfsr_feedback();
+std::byte lfsr_feedback();
 
 
 
@@ -14,4 +18,4 @@ std::vector<std::byte> lfsr{10};
 
 
 
-}
+};
